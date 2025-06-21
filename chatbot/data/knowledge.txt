@@ -1,0 +1,75 @@
+AI/ML HUB — JIIT Noida
+
+Welcome to the AI/ML Hub at Jaypee Institute of Information Technology (JIIT), Sector-62 Noida. This is a student-led organization focused on innovation, learning, and collaboration in Artificial Intelligence and Machine Learning.
+
+🔷 ABOUT:
+AI/ML HUB is a dynamic student-led organization at JIIT dedicated to fostering innovation and learning in Artificial Intelligence and Machine Learning. The community brings together passionate students to explore cutting-edge technologies, collaborate on exciting projects, and grow together in the field of AI/ML.
+
+🔷 FACULTY ADVISOR:
+- Mr. Ashish Mishra
+
+🔷 FOUNDERS:
+- Aman Jain (Santa Clara University | SWE Intern @Microsoft)
+- Ganesh Setty (SDE @ Kickdrum)
+- Shabdansh Gupta (SDE @ Wheelseye)
+
+🔷 SENIOR ADVISORS:
+- Harsh Dhariwal
+- Mansi Monocha
+- Sanat Walia
+
+🔷 CORE TEAM:
+- Priyanshu Aggarwal (President)
+- Ujjwal Garg (Vice President)
+- Nishchay (General Secretary)
+
+🔷 DEPARTMENT HEADS:
+• Management:
+  - Kushagra Tewari
+
+• Marketing:
+  - Sanskar Sahu
+
+• Digital:
+  - Saadgi Bhatia
+  - Aditya Singh
+
+• Technical:
+  - Manya Gangoli
+  - Rudra
+  - Arsh Gupta
+  - Prateek
+  - Yash Malik
+  - Sambhav Gupta
+
+📌 ACTIVITIES:
+- Coding Workshops: Hands-on sessions covering various programming languages and frameworks.
+- Competitions: Participate in exciting coding competitions and build amazing projects.
+- Tech Talks: Learn from expert speakers about the latest trends in technology.
+
+📆 EVENTS:
+
+1. GENESIS: Introduction to Gen-AI (April 2–5, 2025)
+   - Workshop on Generative AI, RAG, AI agents, and building your own AI-powered application.
+
+2. Mindescape (March 1, 2024)
+   - AI-based mini-games competition.
+
+3. Capturing Pics (March 1, 2024)
+   - AI-powered Photobooth where people received AI-generated portraits.
+
+4. Prompt Crafting Competition (Nov 18, 2024)
+   - Challenge to craft the best prompts using Generative AI.
+
+5. Hands-on Machine Learning (Sep 24, 2024)
+   - Weekly sessions focused on applied machine learning.
+
+6. Orientation Program (Sep 18, 2024)
+   - Overview and introduction to the field of AI and ML for new members.
+
+📞 CONTACT INFO:
+- Email: jiit.aiml@gmail.com
+- Location: JIIT Noida, Sec-62
+- Socials: LinkedIn, Twitter, Instagram, WhatsApp Group, Discord
+
+© 2025 AI/ML HUB. All rights reserved.
