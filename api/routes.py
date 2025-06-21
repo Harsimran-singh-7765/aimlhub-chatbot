@@ -16,8 +16,7 @@ class ChatRequest(BaseModel):
     message: str
 
 
-def get_chatbot_response(message: str) -> str:
-    return f"You said: {message}"
+
 
 @app.post("/chat")
 async def chat(request: ChatRequest):
