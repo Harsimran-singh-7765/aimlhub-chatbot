@@ -5,42 +5,26 @@ Welcome to the AI/ML Hub at Jaypee Institute of Information Technology (JIIT), S
 🔷 ABOUT:
 AI/ML HUB is a dynamic student-led organization at JIIT dedicated to fostering innovation and learning in Artificial Intelligence and Machine Learning. The community brings together passionate students to explore cutting-edge technologies, collaborate on exciting projects, and grow together in the field of AI/ML.
 
-🔷 FACULTY ADVISOR:
-- Mr. Ashish Mishra
+🔹 Faculty Coordinator: Dr. ASHISH MISHRA — our guiding light
+🔹 Senior Advisors: Priyanshu Aggarwal | Arsh Gupta 
 
-🔷 FOUNDERS:
-- Aman Jain (Santa Clara University | SWE Intern @Microsoft)
-- Ganesh Setty (SDE @ Kickdrum)
-- Shabdansh Gupta (SDE @ Wheelseye)
+🔸 President: ARPIT PILANIA 
+🔸 Vice President: Aniket Raj 
+🔸 Treasurer: Pranav Aggarwal 
+🔸 General Secretary: Aarsh Shrivastava 
+🔸 Management Head: Rajat Dubey 
 
-🔷 SENIOR ADVISORS:
-- Harsh Dhariwal
-- Mansi Monocha
-- Sanat Walia
+🎨 Digital & Creative Heads: Kritika Khandelwal | Sneha Goel | Avni Rastogi 
+🎥 Cinematography Heads: Samarth Ralph | Manasvi Singh 
+📢 Marketing Head: Saad Ahmed
+📣 PR Head: aakarsh shrivastava 
+📲 Social Media Head: Aditya Kumar 
 
-🔷 CORE TEAM:
-- Priyanshu Aggarwal (President)
-- Ujjwal Garg (Vice President)
-- Nishchay (General Secretary)
+🛠️ Technical Heads:
+Sachin Mishra | Aditya Jain | Arush Dwivedi | Yashita Gogia | Swayam Gupta | Rishu Goyal 
 
-🔷 DEPARTMENT HEADS:
-• Management:
-  - Kushagra Tewari
+✨ 128 Lead: Rashi Dwivedi 
 
-• Marketing:
-  - Sanskar Sahu
-
-• Digital:
-  - Saadgi Bhatia
-  - Aditya Singh
-
-• Technical:
-  - Manya Gangoli
-  - Rudra
-  - Arsh Gupta
-  - Prateek
-  - Yash Malik
-  - Sambhav Gupta
 
 📌 ACTIVITIES:
 - Coding Workshops: Hands-on sessions covering various programming languages and frameworks.
@@ -72,4 +56,4 @@ AI/ML HUB is a dynamic student-led organization at JIIT dedicated to fostering i
 - Location: JIIT Noida, Sec-62
 - Socials: LinkedIn, Twitter, Instagram, WhatsApp Group, Discord
 
-© 2025 AI/ML HUB. All rights reserved.
+

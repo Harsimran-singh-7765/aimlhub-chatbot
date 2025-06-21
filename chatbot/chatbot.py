@@ -6,21 +6,33 @@ print("🔐 Gemini Key Loaded:", os.getenv("GEMINI_API_KEY"))
 from langchain_community.vectorstores import FAISS
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.document_loaders import TextLoader
+from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 
-# Global vectorstore caching
+# Vectorstore caching
 vectorstore = None
 
-# 🧠 Custom System Prompt
-SYSTEM_PROMPT = """
-You are AIML Hub's virtual assistant. Respond in a friendly, helpful, and informative way. 
-If you don't know the answer, suggest the user check with the AIML Hub team. 
-Avoid guessing. Always sound confident and human-like. Try to keep answers short and clear.
-Context: {context}
+# 🎉 Event promotions (example — make dynamic later if needed)
+EVENT_PROMO = """
+✨ Upcoming Events at AIML Hub:
+- 🚀 AI in Healthcare Workshop – June 30th
+- 💡 Hack the Future 2025 – July 12th
+- 🧠 ML Model Zoo Showcase – Every Thursday @ 5PM
+"""
 
-Question: {question}
+# 🧠 System prompt for Gemini LLM
+SYSTEM_PROMPT = f"""
+You are AIML Hub's virtual assistant. Respond in a friendly, helpful, and informative way.
+If you don't know the answer, suggest the user check with the AIML Hub team.
+Avoid guessing. Always sound confident and human-like. Keep answers short and clear.
+
+If the user asks about events, schedule, or "what's happening", include this:
+{EVENT_PROMO}
+
+Context: {{context}}
+
+Question: {{question}}
 """
 
 prompt_template = PromptTemplate(
@@ -28,39 +40,42 @@ prompt_template = PromptTemplate(
     input_variables=["context", "question"]
 )
 
+# 🔍 Load all .txt files from /data directory
+def load_all_documents(directory: str = "chatbot/data") -> list:
+    print(f"📂 Loading all .txt files from: {directory}")
+    loader = DirectoryLoader(directory, glob="**/*.txt", loader_cls=TextLoader)
+    return loader.load()
+
+def clean_response(text: str) -> str:
+    return text.replace("***", "").replace("**", "").strip()
+
+# 📦 Vectorstore initialization
 def load_vectorstore():
     global vectorstore
-    filepath = "chatbot/data/knowledge.txt"
-    if not os.path.exists(filepath):
-        print("❌ Knowledge file not found at:", filepath)
-        raise FileNotFoundError(f"Knowledge file not found at {filepath}")
 
-    print("📄 Loading knowledge file...")
-    loader = TextLoader(filepath, encoding="utf-8")
-    docs = loader.load()
+    print("📄 Loading documents...")
+    docs = load_all_documents()
 
     print(f"📚 Loaded {len(docs)} documents")
-
     splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     chunks = splitter.split_documents(docs)
 
     print(f"✂️ Split into {len(chunks)} chunks")
 
-    print("🔍 Creating embeddings...")
+    print("🧠 Creating embeddings...")
     embeddings = GoogleGenerativeAIEmbeddings(
         model="models/embedding-001",
         google_api_key=os.getenv("GEMINI_API_KEY")
     )
 
-    print("📦 Creating vectorstore...")
+    print("📦 Creating FAISS vectorstore...")
     vectorstore = FAISS.from_documents(chunks, embeddings)
+    print("✅ Vectorstore ready.")
 
-    print("✅ Vectorstore initialized")
-
+# 🤖 Main function to get chatbot response
 def get_chatbot_response(query: str) -> str:
     global vectorstore
-
-    print("💬 Incoming user query:", query)
+    print("💬 Incoming query:", query)
 
     try:
         if not vectorstore:
@@ -68,14 +83,14 @@ def get_chatbot_response(query: str) -> str:
 
         retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
 
-        print("🤖 Initializing Gemini LLM...")
+        print("🤖 Initializing Gemini...")
         llm = ChatGoogleGenerativeAI(
             model="gemini-2.0-flash",
             temperature=0.5,
             google_api_key=os.getenv("GEMINI_API_KEY")
         )
 
-        print("🔗 Setting up RetrievalQA with custom prompt...")
+        print("🔗 Creating RetrievalQA chain...")
         qa_chain = RetrievalQA.from_chain_type(
             llm=llm,
             retriever=retriever,
@@ -86,10 +101,11 @@ def get_chatbot_response(query: str) -> str:
 
         print("⚙️ Running QA chain...")
         response = qa_chain.run(query)
+        cleaned = clean_response(response)
 
-        print("✅ Final response:", response)
-        return response
+        print("✅ Response:", cleaned)
+        return cleaned
 
     except Exception as e:
-        print("🔥 ERROR in get_chatbot_response():", str(e))
-        return "⚠️ Something went wrong. Check backend logs."
+        print("🔥 Error in get_chatbot_response:", str(e))
+        return "⚠️ Something went wrong on the backend. Please try again later."
