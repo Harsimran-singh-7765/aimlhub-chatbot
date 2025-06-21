@@ -13,22 +13,13 @@ from langchain.prompts import PromptTemplate
 # Vectorstore caching
 vectorstore = None
 
-# 🎉 Event promotions (example — make dynamic later if needed)
-EVENT_PROMO = """
-✨ Upcoming Events at AIML Hub:
-- 🚀 AI in Healthcare Workshop – June 30th
-- 💡 Hack the Future 2025 – July 12th
-- 🧠 ML Model Zoo Showcase – Every Thursday @ 5PM
-"""
-
 # 🧠 System prompt for Gemini LLM
 SYSTEM_PROMPT = f"""
 You are AIML Hub's virtual assistant. Respond in a friendly, helpful, and informative way.
 If you don't know the answer, suggest the user check with the AIML Hub team.
 Avoid guessing. Always sound confident and human-like. Keep answers short and clear.
 
-If the user asks about events, schedule, or "what's happening", include this:
-{EVENT_PROMO}
+
 
 Context: {{context}}
 
