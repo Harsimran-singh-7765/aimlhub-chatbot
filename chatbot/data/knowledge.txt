@@ -31,7 +31,7 @@ Sachin Mishra | Aditya Jain | Arush Dwivedi | Yashita Gogia | Swayam Gupta | Ris
 - Competitions: Participate in exciting coding competitions and build amazing projects.
 - Tech Talks: Learn from expert speakers about the latest trends in technology.
 
-📆 EVENTS:
+📆 PAST  EVENTS:
 
 1. GENESIS: Introduction to Gen-AI (April 2–5, 2025)
    - Workshop on Generative AI, RAG, AI agents, and building your own AI-powered application.

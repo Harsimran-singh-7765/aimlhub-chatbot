@@ -15,7 +15,7 @@ user_input = st.text_input("You:", key="user_input")
 if user_input:
     st.session_state.messages.append({"role": "user", "text": user_input})
 
-    response = requests.post("http://localhost:8000/chat", json={"message": user_input})
+    response = requests.post("http://127.0.0.1:8000/chat", json={"message": user_input})
     print("📡 Raw response text:", response.text)
     print("🛰️ Status code:", response.status_code)
 
